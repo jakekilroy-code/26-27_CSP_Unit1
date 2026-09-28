@@ -19,8 +19,19 @@ for floor in range(num_floors):
     # set placement and color of turtle
     painter.penup()
     painter.goto(x, y)
-    painter.color("gray")
+
     y = y + 5  # location of next floor
+
+    #calculate which of the 6 steps we are at
+    rem = floor % 6
+
+    # If in the first 3 floors of the patter, set it to gray
+    if rem < 3:
+        painter.color("gray")
+
+    # Otherwise set it to blue
+    else:
+        painter.color("blue")
 
     # draw the floor
     painter.pendown()
