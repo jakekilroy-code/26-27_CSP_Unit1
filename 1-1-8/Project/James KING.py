@@ -2,10 +2,10 @@ import turtle as trtl
 
 painter = trtl.Turtle()
 painter.pensize(5)
-
+painter.speed(2)
 painter.left(35)
 
-
+painter.pencolor("darkred")
 painter.forward(250)
 painter.left(110)
 painter.forward(250)
@@ -19,27 +19,34 @@ painter.left(70)
 painter.forward(250)
 painter.left(125)
 painter.pendown()
-painter.forward(150)
+painter.forward(180)
 painter.left(65)
 painter.forward(45)
 painter.left(115)
-painter.forward(50)
-painter.right(115)
+painter.forward(65)
+painter.right(125)
 painter.forward(135)
+painter.right(55)
+painter.forward(65)
+painter.left(66)
+painter.forward(55)
+painter.left(113)
+painter.forward(152)
+painter.penup()
+painter.left(180)
+painter.forward(152)
+painter.pendown()
+painter.left(105)
+painter.forward(55)
+painter.left(77)
+painter.forward(65)
+painter.right(57)
+painter.forward(155)
+painter.right(124)
+painter.forward(66)
 painter.left(115)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+painter.forward(45)
+painter.left(69)
+painter.forward(180)
 wn = trtl.Screen()
 wn.mainloop()
