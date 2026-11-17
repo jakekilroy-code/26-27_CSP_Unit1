@@ -5,9 +5,9 @@ import turtle as trtl
 import random as rand
 
 #-----game configuration----
-spot_color = "red"
-spot_size = 5
-spot_shape = "turtle"
+spot_color = "peachpuff"
+spot_size = 10
+spot_shape = "triangle"
 score = 0
 
 
@@ -16,9 +16,15 @@ score = 0
 spot = trtl.Turtle()
 spot.shape(spot_shape)
 spot.turtlesize(spot_size)
-spot.fillcolor(spot_color)
 
+spot.fillcolor(spot_color)
 score_writer = trtl.Turtle()
+score_writer.hideturtle()
+score_writer.shapesize(3)
+score_writer.color(spot_color)
+score_writer.penup()
+score_writer.goto(375, 320)
+
 #-----game functions--------
 def spot_clicked(x, y):
     change_position()
@@ -32,7 +38,13 @@ def update_score():
     global score
     print(score)
     score += 1
+    score_writer.clear()
+    score_writer.write(score, font=font_setup)
 
+
+spot.penup()
+
+font_setup = ("arial", 20, "normal")
 #-----events----------------
 spot.onclick(spot_clicked)
 wn = trtl.Screen()
